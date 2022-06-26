@@ -128,8 +128,8 @@ class RestoController extends Controller
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ];
-        // $result_resto = RestoModel::saveData($data_resto);
-        $result_resto = true;
+        $result_resto = RestoModel::saveData($data_resto);
+        // $result_resto = true;
 
         if ($result_resto) {
             $get_last_id = RestoModel::select('resto_id')
@@ -187,7 +187,7 @@ class RestoController extends Controller
                             'ro_close_hour' => $close_hour,
                             'ro_close_minute' => $close_minute,
                             'ro_open_time_identifier' => $open_identifier,
-                            'ro_close_identifier' => $close_identifier,
+                            'ro_close_time_identifier' => $close_identifier,
                             'created_at' => date('Y-m-d H:i:s'),
                             'updated_at' => date('Y-m-d H:i:s')
                         ];
